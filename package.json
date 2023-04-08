@@ -1,0 +1,32 @@
+{
+  "name": "sfl-website-v2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "sfl-website-v2",
+  "author": "Soorya Saravanapavan",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^2.3.0",
+    "gatsby": "^5.8.1",
+    "gatsby-plugin-google-gtag": "^5.8.0",
+    "gatsby-plugin-mdx": "^5.8.0",
+    "gatsby-plugin-sitemap": "^6.8.0",
+    "gatsby-source-filesystem": "^5.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "overrides": {
+    "react-server-dom-webpack@0.0.0-experimental-c8b778b7f-20220825": {
+      "react": "^18.2.0"
+    }
+  }
+}
