@@ -5,7 +5,7 @@ const IndexPage = () => {
   return (
 	  
 	  <AboutUsSection />
-	  
+
   )
 }
 
