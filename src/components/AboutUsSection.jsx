@@ -1,5 +1,6 @@
 import React from "react";
 import { withPrefix } from "gatsby"
+import "../sass/components/_image_group.scss";
 
 export default class AboutUsSection extends React.Component {
 	
