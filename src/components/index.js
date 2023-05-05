@@ -22,7 +22,7 @@ import AboutUsSection from "./AboutUsSection";
 //import TeamSection from "./TeamSection";
 //import TimelineSection from "./TimelineSection";
 //import VolunteersForm from "./VolunteersForm";
-//import Layout from "./Layout";
+import Layout from "./Layout";
 export {
 	AboutUsSection,
     //Action,
@@ -48,7 +48,7 @@ export {
     //TeamSection,
     //TimelineSection,
     //VolunteersForm,
-    //Layout,
+    Layout,
 };
     
 
@@ -76,5 +76,5 @@ export default {
     //TeamSection,
     //TimelineSection,
     //VolunteersForm,
-    //Layout,
+    Layout,
 };
