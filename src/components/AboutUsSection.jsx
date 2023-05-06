@@ -5,7 +5,8 @@ import "../sass/components/_image_group.scss";
 export default class AboutUsSection extends React.Component {
 	
   render() {
-	let title = "Our team is dedicated to providing a variety of services."
+	let title = "About Us"
+	let subtitle = "Our team is dedicated to providing a variety of services."
 	let content = "We're constantly looking for new non-profits and charities who could benefit from the services that we provide."
 	let align = "center" //CURRENTLY THIS JUST DOES NOTHING
 	let image_group = [
@@ -18,7 +19,7 @@ export default class AboutUsSection extends React.Component {
 	const IconGroup = ({ image, caption }) => {
 		
 		return 	(
-			<div className="image-group-container">
+			<div className="image-group-media">
 				<img src={withPrefix(image)}/>
 				<div style={{color:"#263455"}}>
 					{caption}
@@ -40,18 +41,19 @@ export default class AboutUsSection extends React.Component {
 				<div className="flex-2 section__body cell" >
 					<div>
 						<div className="section__title" style={{fontSize: "1.4em", fontWeight: "bold", color:"#000"}}>
-							{/*title*/}
+							{subtitle}
 						</div>
 						<div className="section__copy" style={{fontSize: "1.4em", color:"#000"}}>
 							{content}
 						</div>
 					</div>
-					
-					{image_group.map((i) => (
-					
-						<IconGroup key={i} image={i.image} caption ={i.caption}/>
-					
-					))}
+					<div className="image-group-container">
+						{image_group.map((i) => (
+						
+							<IconGroup key={i} image={i.image} caption ={i.caption}/>
+						
+						))}
+					</div>
 					
 					{/*<div className="image-group-container">
 						map(_.get(feature, "image_group", null), (image_info, image_idx) => (
