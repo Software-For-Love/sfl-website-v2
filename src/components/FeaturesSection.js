@@ -1,12 +1,12 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import { withPrefix } from "gatsby";
-import { classNames } from "../utils";
+import { classNames, Link } from "../utils";
 import _ from "lodash";
 //import { Card, Space } from 'antd';
 
 //import { classNames, withPrefix, markdownify, Link } from "../utils";
-//import SectionActions from "./SectionActions";
+import SectionActions from "./SectionActions";
 import { Carousel, ImageGroup } from "./index";
 import "../sass/components/_feature_carousel.scss";
 
@@ -40,8 +40,10 @@ export default class FeaturesSection extends React.Component {
 	let action_style = "primary"
 	let button_margins = "0 0 0 5em"
 	
+	let section = {title: ""}
+	
 	let features = [
-		partner_with_us = {
+		{
 			content: "We understand that it may be difficult or expensive for charities or non-profits to acquire the software solutions that they need, so we work with them to build custom solutions, free of charge.",
 			box_shadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
 			background: "rgba(141, 184, 191, 1)",
@@ -59,19 +61,9 @@ export default class FeaturesSection extends React.Component {
 			image_zindex: "5",
 			image_width: "25em",
 			image_height: "15.65em",
-			image_float: "right",
-		},
-
+			image_float: "right"
+		}
 	]
-	let section_image_group = null;
-	
-	let section_carousels = null;
-	let section_carousel_title = null;
-	
-	let section_title = null;
-	let section_features = null;
-	let section_bg_color = null;
-	let section_justify_content = null;
 	  
     //let section = _.get(this.props, "section", null);
 	const largeScreenWidth = 820;
@@ -102,7 +94,7 @@ export default class FeaturesSection extends React.Component {
               </p>
             </div>
         <div class="carousel-content">
-          {section_image && (
+          {/*section_image && (
             <div
               className={classNames("cell", "section__media", {
                 "section__media--right":
@@ -114,13 +106,15 @@ export default class FeaturesSection extends React.Component {
                 alt={section_image_alt}
               />
             </div>
-          )}
+          )*/}
 		  
           
           </div>
         </div>
       );
     };
+	
+	
     return (
       <section className="section section--features">
         {_.get(section, "title", null) && (
@@ -129,8 +123,8 @@ export default class FeaturesSection extends React.Component {
           </div>
         )}
         <div>
-          {_.map(_.get(section, "features", null), (feature, feature_idx) => (
-            <div style={{ backgroundColor: section_bg_color ? `#${section_bg_color}` : undefined, }}>
+          {_.map(features, (feature, feature_idx) => (
+            <div style={{ backgroundColor: _.get(feature, "bgcolor", undefined) ? `#${_.get(feature, "bgcolor", undefined)}` : undefined, }}>
               <div
                 key={feature_idx}
                 className={classNames(
@@ -232,7 +226,7 @@ export default class FeaturesSection extends React.Component {
 					    fontSize:_.get(feature, "content_size", null),
 					    fontFamily: _.get(feature, "content_font", null)
 					}}>
-                      {markdownify(_.get(feature, "content", null))}
+                      {_.get(feature, "content", null)}
                     </div>
                   )}
                   {_.get(feature, "actions", null) && (
