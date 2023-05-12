@@ -6,7 +6,10 @@ module.exports = {
     title: `SFL Website v2`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-google-gtag", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", "gatsby-plugin-sass", {
+  plugins: ["gatsby-plugin-mdx",
+  //"gatsby-plugin-google-gtag", 
+  "gatsby-plugin-sitemap",  
+  "gatsby-plugin-sass", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",

@@ -1,12 +1,15 @@
 import React from "react";
 import { useState, useEffect } from 'react';
+import { withPrefix } from "gatsby";
+import { classNames } from "../utils";
 import _ from "lodash";
-import { Card, Space } from 'antd';
+//import { Card, Space } from 'antd';
 
-import { classNames, withPrefix, markdownify, Link } from "../utils";
-import SectionActions from "./SectionActions";
+//import { classNames, withPrefix, markdownify, Link } from "../utils";
+//import SectionActions from "./SectionActions";
 import { Carousel, ImageGroup } from "./index";
 import "../sass/components/_feature_carousel.scss";
+
 export default class FeaturesSection extends React.Component {
   
   constructor(props) {
@@ -29,7 +32,48 @@ export default class FeaturesSection extends React.Component {
   }
 
   render() {
-    let section = _.get(this.props, "section", null);
+	  
+	let title = null;
+	
+	let action_label = "Partner With Us"
+	let action_url = "/organizations"
+	let action_style = "primary"
+	let button_margins = "0 0 0 5em"
+	
+	let features = [
+		partner_with_us = {
+			content: "We understand that it may be difficult or expensive for charities or non-profits to acquire the software solutions that they need, so we work with them to build custom solutions, free of charge.",
+			box_shadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+			background: "rgba(141, 184, 191, 1)",
+			padding: "6% 0.5em",
+			margins: "-0.5em 0 0 3em",
+			color: "white",
+			size: "1.5em",
+			font: "roboto",
+			align: "left",
+			image: "images/Humaaans1.png",
+			image_alt: "Volunteers placeholder image",
+			image_position: "left",
+			image_position_type: "relative",
+			image_margins: "0 -5em 0 0",
+			image_zindex: "5",
+			image_width: "25em",
+			image_height: "15.65em",
+			image_float: "right",
+		},
+
+	]
+	let section_image_group = null;
+	
+	let section_carousels = null;
+	let section_carousel_title = null;
+	
+	let section_title = null;
+	let section_features = null;
+	let section_bg_color = null;
+	let section_justify_content = null;
+	  
+    //let section = _.get(this.props, "section", null);
 	const largeScreenWidth = 820;
     const carouselTemplate = (item) => {
       return (
@@ -58,16 +102,16 @@ export default class FeaturesSection extends React.Component {
               </p>
             </div>
         <div class="carousel-content">
-          {_.get(section, "image", null) && (
+          {section_image && (
             <div
               className={classNames("cell", "section__media", {
                 "section__media--right":
-                  _.get(section, "image_position", null) === "right",
+                  section_image_position === "right",
               })}
             >
               <img
-                src={withPrefix(_.get(section, "image", null))}
-                alt={_.get(section, "image_alt", null)}
+                src={withPrefix(section_image)}
+                alt={section_image_alt}
               />
             </div>
           )}
@@ -86,7 +130,7 @@ export default class FeaturesSection extends React.Component {
         )}
         <div>
           {_.map(_.get(section, "features", null), (feature, feature_idx) => (
-            <div style={{ backgroundColor: _.get(feature, "bgcolor", undefined) ? `#${_.get(feature, "bgcolor", undefined)}` : undefined, }}>
+            <div style={{ backgroundColor: section_bg_color ? `#${section_bg_color}` : undefined, }}>
               <div
                 key={feature_idx}
                 className={classNames(
@@ -202,7 +246,7 @@ export default class FeaturesSection extends React.Component {
                     </div>
                   )}
                 </div>) : ""}
-                {_.get(feature, "cards", null) && (
+                {/*_.get(feature, "cards", null) && (
                   <Space size={50} style={{ flexBasis: '100%', justifyContent: 'space-between' }}>
                     {_.map(_.get(feature, "cards", null), (card, card_idx) => (
                       <Link to={_.get(card, "redirect")} style={{ textDecoration: 'none' }}>
@@ -212,7 +256,7 @@ export default class FeaturesSection extends React.Component {
                       </Link>
                     ))}
                   </Space>
-                )}
+                )*/}
                 {_.get(feature, "link", null) && (
                   <div className="cell" style={{ marginTop: '25px' }}>
                     <Link to={_.get(feature, "link")["url"]}>

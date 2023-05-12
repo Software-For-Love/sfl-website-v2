@@ -1,11 +1,12 @@
 import * as React from "react"
-import { AboutUsSection } from "../components/index";
+import { AboutUsSection, FeaturesSection } from "../components/index";
 
 const IndexPage = () => {
   return (
-	  
-	  <AboutUsSection />
-
+	  <span>
+		<AboutUsSection />
+		<FeaturesSection />
+	  </span>
   )
 }
 

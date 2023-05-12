@@ -11,7 +11,7 @@ import AboutUsSection from "./AboutUsSection";
 //import CtaSection from "./CtaSection";
 //import DonationForm from './DonationForm';
 //import FaqSection from "./FaqSection";
-//import FeaturesSection from "./FeaturesSection";
+import FeaturesSection from "./FeaturesSection";
 //import Footer from "./Footer";
 //import GeneralForm from "./GeneralForm";
 //import Header from "./Header";
@@ -37,7 +37,7 @@ export {
     //Carousel,
     //DonationForm,
     //FaqSection,
-    //FeaturesSection,
+    FeaturesSection,
     //Footer,
     //GeneralForm,
     //Header,
@@ -66,7 +66,7 @@ export default {
     //Carousel,
     //DonationForm,
     //FaqSection,
-    //FeaturesSection,
+    FeaturesSection,
     //Footer,
     //GeneralForm,
     //Header,
