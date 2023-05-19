@@ -46,6 +46,7 @@ export default class FeaturesSection extends React.Component {
 		{
 			content: "We understand that it may be difficult or expensive for charities or non-profits to acquire the software solutions that they need, so we work with them to build custom solutions, free of charge.",
 			box_shadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+			border_radius: "10px",
 			background: "rgba(141, 184, 191, 1)",
 			padding: "6% 0.5em",
 			margins: "-0.5em 0 0 3em",
@@ -61,7 +62,15 @@ export default class FeaturesSection extends React.Component {
 			image_zindex: "5",
 			image_width: "25em",
 			image_height: "15.65em",
-			image_float: "right"
+			image_float: "right",
+			button_margins: "0 0 0 5em",
+			actions: [
+				{
+					label: "Partner with Us!",
+					url: "/organizations",
+					style: "primary"
+				}
+			]
 		}
 	]
 	  
@@ -204,9 +213,10 @@ export default class FeaturesSection extends React.Component {
                 )}
                 {_.get(feature, "title", null) || _.get(feature, "content", null) || _.get(feature, "actions", null) ? ( <div className="flex-2 section__body cell"
 				style={{
-				  boxShadow:_.get(feature, "content_box_shadow", null),
-				  backgroundColor: _.get(feature, "content_background", null),
-				  paddingBlock: _.get(feature, "content_padding", null)
+				  boxShadow:_.get(feature, "box_shadow", null),
+				  backgroundColor: _.get(feature, "background", null),
+				  paddingBlock: _.get(feature, "padding", null),
+				  borderRadius: _.get(feature, "border_radius", null)
 			    }}>
                   {_.get(feature, "title", null) &&
                     (_.get(section, "title", null) ? (
@@ -221,10 +231,10 @@ export default class FeaturesSection extends React.Component {
                   {_.get(feature, "content", null) && (
                     <div className="section__copy"
 					  style={{
-					    margin: this.state.width >= largeScreenWidth ? _.get(feature, "content_margins", null) : null,
-					    color:_.get(feature, "content_color", null),
-					    fontSize:_.get(feature, "content_size", null),
-					    fontFamily: _.get(feature, "content_font", null)
+					    margin: this.state.width >= largeScreenWidth ? _.get(feature, "margins", null) : null,
+					    color:_.get(feature, "color", null),
+					    fontSize:_.get(feature, "size", null),
+					    fontFamily: _.get(feature, "font", null)
 					}}>
                       {_.get(feature, "content", null)}
                     </div>
