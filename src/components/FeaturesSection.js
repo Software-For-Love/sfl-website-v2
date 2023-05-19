@@ -66,8 +66,37 @@ export default class FeaturesSection extends React.Component {
 			button_margins: "0 0 0 5em",
 			actions: [
 				{
-					label: "Partner with Us!",
+					label: "Partner with Us",
 					url: "/organizations",
+					style: "primary"
+				}
+			]
+		},
+		{
+			content: "Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.",
+			box_shadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+			border_radius: "10px",
+			background: "rgba(141, 184, 191, 1)",
+			padding: "6% 0.5em",
+			margins: "-0.5em 3em 0 1.5em",
+			color: "white",
+			size: "1.5em",
+			font: "roboto",
+			align: "left",
+			image: "images/Humaaans1.png",
+			image_alt: "Volunteers placeholder image",
+			image_position: "right",
+			image_position_type: "relative",
+			image_margins: "0 0 0 -5em",
+			image_zindex: "5",
+			image_width: "25em",
+			image_height: "15.65em",
+			image_float: "left",
+			button_margins: "0 0 0 2em",
+			actions: [
+				{
+					label: "Become a Volunteer",
+					url: "/volunteers",
 					style: "primary"
 				}
 			]
