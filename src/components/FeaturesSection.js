@@ -58,13 +58,37 @@ export default class FeaturesSection extends React.Component {
 			image_height: "15.65em",
 			image_float: "right",
 			button_margins: "0 0 0 5em",
-			actions: [
+			actions: 
+			[
 				{
 					label: "Partner with Us",
 					url: "/organizations",
 					style: "primary"
 				}
 			],
+			carousel_title: "Testimonials",
+			carousels: {
+				items: [
+					{
+						company: "uBionics CTS",
+						author: "Tharaka Abeykoon",
+						relation: "Founder",
+						testimonial: "Software For Love was given tight deadlines which they followed through and the website was done very well. uBionics loves their work!",
+					},
+					{
+						company: "ESS",
+						author: "Kaleigh Ionadi",
+						relation: "VP Comm",
+						testimonial: "Software For Love was very pleasant to work with and produced a quality product for our team at ESS to use for many years to come.",
+					},
+					{
+						company: "Santropol Roulant",
+						author: "Laura Marec",
+						relation: "Manager",
+						testimonial: "Software For Love is super professional and efficient, they are solution driven and adapt to the need of their clients.",
+					},
+				]
+			}
 		},
 		{
 			title: "Past Projects",
