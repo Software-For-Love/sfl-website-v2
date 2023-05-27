@@ -3,9 +3,8 @@ import { useState, useEffect } from 'react';
 import { withPrefix } from "gatsby";
 import { classNames, Link } from "../utils";
 import _ from "lodash";
-//import { Card, Space } from 'antd';
-
-//import { classNames, withPrefix, markdownify, Link } from "../utils";
+import { Card, Space } from 'antd';
+//import 'antd/dist/reset.css';
 import SectionActions from "./SectionActions";
 import { Carousel, ImageGroup } from "./index";
 import "../sass/components/_feature_carousel.scss";
@@ -34,11 +33,6 @@ export default class FeaturesSection extends React.Component {
   render() {
 	  
 	let title = null;
-	
-	let action_label = "Partner With Us"
-	let action_url = "/organizations"
-	let action_style = "primary"
-	let button_margins = "0 0 0 5em"
 	
 	let section = {title: ""}
 	
@@ -70,13 +64,36 @@ export default class FeaturesSection extends React.Component {
 					url: "/organizations",
 					style: "primary"
 				}
-			]
+			],
+			cards: [
+				{
+					image: "/images/rapidrent_small.png",
+					alt: "RapidRent",
+					label: "RapidRent",
+					caption: "Web Development",
+					redirect: "/blog/rapidrent",
+				},
+				{
+					image: "/images/ubionics_small.png",
+					alt: "uBionics Website",
+					label: "uBionics Website",
+					caption: "Web Development",
+					redirect:  "/blog/bionics",
+				},
+				{
+					image: "/images/ess-website_small.png",
+					alt: "uOttawa ESS Website",
+					label:  "uOttawa ESS Website",
+					caption: "Web Development",
+					redirect: "/blog/uottawaess/",
+				},
+			],
 		},
 		{
 			content: "Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.",
 			box_shadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
 			border_radius: "10px",
-			background: "rgba(141, 184, 191, 1)",
+			background: "rgba(161, 171, 205, 1)",
 			padding: "6% 0.5em",
 			margins: "-0.5em 3em 0 1.5em",
 			color: "white",
@@ -279,7 +296,7 @@ export default class FeaturesSection extends React.Component {
                     </div>
                   )}
                 </div>) : ""}
-                {/*_.get(feature, "cards", null) && (
+                {_.get(feature, "cards", null) && (
                   <Space size={50} style={{ flexBasis: '100%', justifyContent: 'space-between' }}>
                     {_.map(_.get(feature, "cards", null), (card, card_idx) => (
                       <Link to={_.get(card, "redirect")} style={{ textDecoration: 'none' }}>
@@ -289,7 +306,7 @@ export default class FeaturesSection extends React.Component {
                       </Link>
                     ))}
                   </Space>
-                )*/}
+                )}
                 {_.get(feature, "link", null) && (
                   <div className="cell" style={{ marginTop: '25px' }}>
                     <Link to={_.get(feature, "link")["url"]}>

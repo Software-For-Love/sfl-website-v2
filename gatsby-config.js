@@ -9,7 +9,9 @@ module.exports = {
   plugins: ["gatsby-plugin-mdx",
   //"gatsby-plugin-google-gtag", 
   "gatsby-plugin-sitemap",  
-  "gatsby-plugin-sass", {
+  "gatsby-plugin-sass",
+  "gatsby-plugin-antd",
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
