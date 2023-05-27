@@ -5,7 +5,7 @@ import AboutUsSection from "./AboutUsSection";
 //import BlogPostCategories from "./BlogPostCategories";
 //import BlogPostFeedItem from "./BlogPostFeedItem";
 //import BlogPostTags from "./BlogPostTags";
-//import Carousel from "./Carousel"
+import Carousel from "./Carousel"
 //import ContactSection from "./ContactSection";
 //import ContentSection from "./ContentSection";
 //import CtaSection from "./CtaSection";
@@ -34,7 +34,7 @@ export {
     //ContactSection,
     //ContentSection,
     //CtaSection,
-    //Carousel,
+    Carousel,
     //DonationForm,
     //FaqSection,
     FeaturesSection,
@@ -63,7 +63,7 @@ export default {
     //ContactSection,
     //ContentSection,
     //CtaSection,
-    //Carousel,
+    Carousel,
     //DonationForm,
     //FaqSection,
     FeaturesSection,

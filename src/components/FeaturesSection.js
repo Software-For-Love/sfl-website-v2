@@ -65,6 +65,11 @@ export default class FeaturesSection extends React.Component {
 					style: "primary"
 				}
 			],
+		},
+		{
+			title: "Past Projects",
+			bgcolor: "e8edf3",
+			justifyContent: "center",
 			cards: [
 				{
 					image: "/images/rapidrent_small.png",
@@ -88,6 +93,10 @@ export default class FeaturesSection extends React.Component {
 					redirect: "/blog/uottawaess/",
 				},
 			],
+			link: {
+				title: "See All Projects",
+				url: "/blog"
+			}
 		},
 		{
 			content: "Our platform encourages students to showcase their skills and abilities, while also providing back to the community. We recruit new talent for marketing, finance, engineering, and more.",
@@ -149,19 +158,19 @@ export default class FeaturesSection extends React.Component {
               </p>
             </div>
         <div class="carousel-content">
-          {/*section_image && (
+          {_.get(section, "image", null) && (
             <div
               className={classNames("cell", "section__media", {
                 "section__media--right":
-                  section_image_position === "right",
+                  _.get(section, "image_position", null) === "right",
               })}
             >
               <img
-                src={withPrefix(section_image)}
-                alt={section_image_alt}
+                src={withPrefix(_.get(section, "image", null))}
+                alt={_.get(section, "image_alt", null)}
               />
             </div>
-          )*/}
+          )}
 		  
           
           </div>
@@ -196,7 +205,7 @@ export default class FeaturesSection extends React.Component {
                 )}
                 style={{
                   margin: 'auto',
-                  justifyContent: _.get(feature, "justify-content", null) || undefined,
+                  justifyContent: _.get(feature, "justifyContent", null) || undefined,
                 }}
               >
                 {_.get(feature, "image", null) && (

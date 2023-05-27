@@ -27,7 +27,8 @@
     "gatsby-source-filesystem": "^5.8.0",
     "html-react-parser": "^3.0.16",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-flickity-component": "^4.0.5"
   },
   "overrides": {
     "react-server-dom-webpack@0.0.0-experimental-c8b778b7f-20220825": {
