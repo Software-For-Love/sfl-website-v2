@@ -15,7 +15,7 @@ import FeaturesSection from "./FeaturesSection";
 //import Footer from "./Footer";
 //import GeneralForm from "./GeneralForm";
 //import Header from "./Header";
-//import HeroSection from "./HeroSection";
+import HeroSection from "./HeroSection";
 //import ImageGroup from "./ImageGroup";
 //import OrganizationsForm from "./OrganizationsForm";
 //import SectionActions from "./SectionActions";
@@ -41,7 +41,7 @@ export {
     //Footer,
     //GeneralForm,
     //Header,
-    //HeroSection,
+    HeroSection,
     //ImageGroup,
     //OrganizationsForm,
     //SectionActions,
@@ -70,7 +70,7 @@ export default {
     //Footer,
     //GeneralForm,
     //Header,
-    //HeroSection,
+    HeroSection,
     //OrganizationsForm,
     //SectionActions,
     //TeamSection,

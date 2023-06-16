@@ -1,9 +1,10 @@
 import * as React from "react"
-import { AboutUsSection, FeaturesSection } from "../components/index";
+import { AboutUsSection, HeroSection, FeaturesSection } from "../components/index";
 
 const IndexPage = () => {
   return (
 	  <span>
+		<HeroSection />
 		<AboutUsSection />
 		<FeaturesSection />
 	  </span>

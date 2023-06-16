@@ -1,13 +1,42 @@
 import React from "react";
 import _ from "lodash";
-import { markdownify } from "../utils";
+//import { markdownify } from "../utils";
 
 import { classNames, toStyleObj, withPrefix } from "../utils";
 import SectionActions from "./SectionActions";
 
 export default class HeroSection extends React.Component {
     render() {
-        let section = _.get(this.props, "section", null);
+        //let section = _.get(this.props, "section", null);
+		
+		let section = {
+			title: "Software for Love",
+			subtitle: "Software For Love is a non-profit organization that focuses on providing software solutions. We are a team of young professionals who are passionate about technology and seek to give back to our community.",
+			actions: [
+				{
+					label: "Partner With Us",
+					url: "/organizations",
+					style: "primary",
+				},
+				{
+					label: "Volunteer",
+					url: "/volunteers",
+					style: "secondary",
+				},
+			],
+			align: "left",
+			image: "images/homepage.gif",
+			image_alt: "Hero placeholder image",
+			image_position: "right",
+			has_background: "true",
+			background: {
+				background_color: "blue",
+				background_image_opacity: "20",
+				background_image_size: "auto",
+				background_image_repeat: "repeat",
+			},
+		}
+		
         let background = _.get(section, "background", null);
         let background_color =
             _.get(background, "background_color", null) || "white";
@@ -107,9 +136,7 @@ export default class HeroSection extends React.Component {
                             {_.get(section, "subtitle", null) && (
                                 <div className="section__copy">
                                     <div>
-                                        {markdownify(
-                                            _.get(section, "subtitle", null)
-                                        )}
+                                        {_.get(section, "subtitle", null)}
                                     </div>
                                 </div>
                             )}
