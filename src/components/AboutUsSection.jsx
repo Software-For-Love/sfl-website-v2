@@ -30,7 +30,7 @@ export default class AboutUsSection extends React.Component {
 	}
 
     return (
-		<section className="section section--features" style={{backgroundColor: '#F0F3F8', maxWidth: '1140px', marginRight: 'auto', marginLeft: 'auto'}}>
+		<section className="section section--features" style={{backgroundColor: '#F0F3F8', maxWidth: '1140px', marginRight: 'auto', marginLeft: 'auto', marginBottom: '0'}}>
 		
 			<div className="container container--md align-center" style={{paddingTop: "2em", marginBottom: "-2em"}}>
 				<h2 className="section__title" style={{color:'#263455'}}>{title}</h2>
