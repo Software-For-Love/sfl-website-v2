@@ -274,9 +274,9 @@ export default class FeaturesSection extends React.Component {
                     <h2 className="carousel__title">
                         {_.get(feature, "carousel_title", null)}
                     </h2>
-                    <div className="carousel-wrapper">
+                    <div className="carousel-box-container">
 						{_.map(feature["carousels"]["items"], item => (
-						  <div className="content-wrapper">
+						  <div className="carousel-cell">
 							<div class="quote-icon" style={{position: "absolute", left: "-15px", top: "-15px"}}>
 							  <svg
 								width="25"
