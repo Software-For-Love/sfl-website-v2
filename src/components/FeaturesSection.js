@@ -158,7 +158,7 @@ export default class FeaturesSection extends React.Component {
     const carouselTemplate = (item) => {
       return (
 	    <div class="content-wrapper">
-            <div class="quote-icon" style={{position: "absolute", left: "-15px", top: "-15px"}}>
+            <div class="quote-icon" style={{position: "relative", left: "-15px", top: "-15px"}}>
               <svg
                 width="25"
                 height="16"
@@ -277,7 +277,7 @@ export default class FeaturesSection extends React.Component {
                     <div className="carousel-box-container">
 						{_.map(feature["carousels"]["items"], item => (
 						  <div className="carousel-cell">
-							<div class="quote-icon" style={{position: "absolute", left: "-15px", top: "-15px"}}>
+							<div class="quote-icon" style={{position: "relative", left: "-15px", top: "-15px"}}>
 							  <svg
 								width="25"
 								height="16"
