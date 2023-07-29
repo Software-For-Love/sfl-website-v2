@@ -1,13 +1,13 @@
 import * as React from "react"
-import { AboutUsSection, HeroSection, FeaturesSection } from "../components/index";
+import { AboutUsSection, HeroSection, FeaturesSection, Layout} from "../components/index";
 
 const IndexPage = () => {
   return (
-	  <span>
+	  <Layout>
 		<HeroSection />
 		<AboutUsSection />
 		<FeaturesSection />
-	  </span>
+	  </Layout>
   )
 }
 

@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 //import {withPrefix} from '../utils';
 import '../sass/main.scss';
-//import Header from './Header';
+import Header from './Header';
 //import Footer from './Footer';
 //import Action from './Action';
 
@@ -37,7 +37,7 @@ export default class Body extends React.Component {
                     </div>
 				</CookieConsent>*/}
                 <div id="site-wrap" className="site">
-				  {/*<Header {...this.props} />*/}
+				  {<Header {...this.props} />}
                   <main id="content" className="site-content">
                     {this.props.children}
                   </main>
